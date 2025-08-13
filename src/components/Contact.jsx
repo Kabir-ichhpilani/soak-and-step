@@ -1,11 +1,12 @@
 import { openingHours, socials } from '../../constants/index.js'
 import { useGSAP } from '@gsap/react'
-import { SplitText,ScrollTrigger} from 'gsap/all';
+import { SplitText, ScrollTrigger } from 'gsap/all';
 import gsap from 'gsap';
 
 const Contact = () => {
     gsap.registerPlugin(SplitText);
     gsap.registerPlugin(ScrollTrigger);
+
     useGSAP(() => {
         const titleSplit = SplitText.create('#contact h2', { type: 'words' });
 
@@ -33,35 +34,31 @@ const Contact = () => {
 
     return (
         <footer id="contact">
-            <img src="/images/footer-right-leaf.png" alt="leaf-right" id="f-right-leaf" />
-            <img src="/images/footer-left-leaf.png" alt="leaf-left" id="f-left-leaf" />
+
 
             <div className="content">
                 <h2>Where to Find Us</h2>
 
                 <div>
-                    <h3>Visit Our Bar</h3>
-                    <p>456, Raq Blvd. #404, Los Angeles, CA 90210</p>
+                    <h3>Our Address</h3>
+                    <p>Soak & Step</p>
+                    <p>Panipat-132103, Haryana, India</p>
                 </div>
 
                 <div>
                     <h3>Contact Us</h3>
-                    <p>(555) 987-6543</p>
-                    <p>hello@jsmcocktail.com</p>
+
+                    <p>contact@soakandstep.com</p>
                 </div>
 
                 <div>
-                    <h3>Open Every Day</h3>
-                    {openingHours.map((time) => (
-                        <p key={time.day}>
-                            {time.day} : {time.time}
-                        </p>
-                    ))}
+                    <h3>Manufactured By</h3>
+                    <p>Himvikas Industries</p>
+                    <p>Jattal Road, Panipat-132103</p>
                 </div>
 
                 <div>
                     <h3>Socials</h3>
-
                     <div className="flex-center gap-5">
                         {socials.map((social) => (
                             <a

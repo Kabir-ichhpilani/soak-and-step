@@ -1,74 +1,87 @@
-import {cocktailLists, mockTailLists} from "../../constants/index.js";
-import gsap from "gsap";
-import {useGSAP} from "@gsap/react";
+import React, { useEffect, useRef } from "react";
 
+const LuxuryKidsCarpets = () => {
+    const itemsRef = useRef([]);
 
-const Cocktails = () => {
-    useGSAP(()=>{
-       const timeline = gsap.timeline({
-              scrollTrigger: {
-                trigger: "#cocktails",
-                start: "top 30%",
-                end: "bottom 80%",
-                scrub: true,
-              },
-       });
-       timeline.from("#c-left-leaf", {
-           x: -100,y:100
-       })
-        timeline.from("#c-right-leaf", {
-              x: 100,y:100
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = "1";
+                            entry.target.style.transform = "scale(1) translateY(0)";
+                        }, index * 100);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
 
-        })
+        itemsRef.current.forEach((item) => {
+            if (item) observer.observe(item);
+        });
 
-    });
+        return () => observer.disconnect();
+    }, []);
+
+    const addToRefs = (el) => {
+        if (el && !itemsRef.current.includes(el)) {
+            itemsRef.current.push(el);
+        }
+    };
+
+    const cardStyle = {
+        boxShadow:
+            "0 0 15px rgba(255, 255, 255, 0.12), 0 0 25px rgba(255, 255, 255, 0.05)",
+        border: "1px solid rgba(255, 255, 255, 0.15)",
+    };
+
     return (
-       <section id="cocktails" className="noisy">
-           <img src="/images/cocktail-left-leaf.png" id="c-left-leaf"/>
-
-           <img src="/images/cocktail-right-leaf.png" id="c-right-leaf"/>
-            <div className="list">
-                <div className="popular">
-                    <h2>Most Popular Drinks:</h2>
-                    <ul>
-                        {cocktailLists.map(({name, country, detail, price}) => (
-                                <li key={name}>
-                                    <div className="md:me-28">
-                                        <h3>{name}</h3>
-
-                                        <p>{country} | {detail}</p>
-
-                                    </div>
-                                    <span>-{price}</span>
-
-                                </li>
-
-
-                        ))}
-                    </ul>
+        <div className="bg-black py-12 px-4 flex justify-center min-h-[600px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl">
+                {/* Large Image */}
+                <div
+                    ref={addToRefs}
+                    className="relative rounded-xl overflow-hidden  transform scale-95 translate-y-6 transition-all duration-700 h-[550px]"
+                    style={cardStyle}
+                >
+                    <img
+                        src="/images/WhatsApp%20Image%202025-08-13%20at%2019.45.04_7883b415.jpg"
+                        alt="Forest carpet"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
-                <div className="loved">
-                    <h2>Most Loved Mocktails:</h2>
-                    <ul>
-                        {mockTailLists.map(({name, country, detail, price}) => (
-                            <li key={name}>
-                                <div className="md:me-28">
-                                    <h3>{name}</h3>
 
-                                    <p>{country} | {detail}</p>
+                {/* Two stacked small images */}
+                <div className="grid grid-rows-2 gap-4">
+                    <div
+                        ref={addToRefs}
+                        className="relative rounded-xl overflow-hidden  transform scale-95 translate-y-6 transition-all duration-700 h-[255px]"
+                        style={cardStyle}
+                    >
+                        <img
+                            src="/images/WhatsApp%20Image%202025-08-13%20at%2019.45.02_3f3ed62a.jpg"
+                            alt="Castle carpet"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
 
-                                </div>
-                                <span>-{price}</span>
-
-                            </li>
-
-
-                        ))}
-                    </ul>
+                    <div
+                        ref={addToRefs}
+                        className="relative rounded-xl overflow-hidden  transform scale-95 translate-y-6 transition-all duration-700 h-[250px]"
+                        style={cardStyle}
+                    >
+                        <img
+                           src="/images/WhatsApp%20Image%202025-08-13%20at%2019.45.01_88481eef.jpg"
+                            alt="Space carpet"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
             </div>
+        </div>
+    );
+};
 
-       </section>
-    )
-}
-export default Cocktails
+export default LuxuryKidsCarpets;

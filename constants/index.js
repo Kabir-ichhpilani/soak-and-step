@@ -1,7 +1,7 @@
 const navLinks = [
     {
-        id: "cocktails",
-        title: "Cocktails",
+        id: "hero",
+        title: "Home",
     },
     {
         id: "about",
@@ -19,55 +19,55 @@ const navLinks = [
 
 const cocktailLists = [
     {
-        name: "Chapel Hill Shiraz",
-        country: "AU",
-        detail: "Battle",
-        price: "$10",
+        name: "Kashmiri Silk Royale",
+        country: "IN",
+        detail: "Handwoven",
+        price: "₹49,999",
     },
     {
-        name: "Caten Malbee",
-        country: "AU",
-        detail: "Battle",
-        price: "$49",
+        name: "Persian Heritage",
+        country: "IR",
+        detail: "Hand-knotted",
+        price: "₹1,29,999",
     },
     {
-        name: "Rhino Pale Ale",
-        country: "CA",
-        detail: "750 ml",
-        price: "$20",
+        name: "Jaipur Royal Weave",
+        country: "IN",
+        detail: "8x10 ft",
+        price: "₹89,999",
     },
     {
-        name: "Irish Guinness",
-        country: "IE",
-        detail: "600 ml",
-        price: "$29",
+        name: "Agra Mughal Classic",
+        country: "IN",
+        detail: "6x9 ft",
+        price: "₹69,999",
     },
 ];
 
 const mockTailLists = [
     {
-        name: "Tropical Bloom",
-        country: "US",
-        detail: "Battle",
-        price: "$10",
+        name: "Banarasi Loom Gold",
+        country: "IN",
+        detail: "Handwoven",
+        price: "₹59,999",
     },
     {
-        name: "Passionfruit Mint",
-        country: "US",
-        detail: "Battle",
-        price: "$49",
+        name: "Pashmina Luxe",
+        country: "IN",
+        detail: "Handcrafted",
+        price: "₹1,49,999",
     },
     {
-        name: "Citrus Glow",
-        country: "CA",
-        detail: "750 ml",
-        price: "$20",
+        name: "Desert Sand Dhurrie",
+        country: "IN",
+        detail: "8x10 ft",
+        price: "₹79,999",
     },
     {
-        name: "Lavender Fizz",
-        country: "IE",
-        detail: "600 ml",
-        price: "$29",
+        name: "Ocean Breeze Kashmir",
+        country: "IN",
+        detail: "6x9 ft",
+        price: "₹64,999",
     },
 ];
 
@@ -87,85 +87,85 @@ const profileLists = [
 ];
 
 const featureLists = [
-    "Perfectly balanced blends",
-    "Garnished to perfection",
-    "Ice-cold every time",
-    "Expertly shaken & stirred",
+    "Perfectly matched patterns",
+    "Finishing with precision",
+    "Soft under every step",
+    "Expertly woven by artisans",
 ];
 
 const goodLists = [
-    "Handpicked ingredients",
-    "Signature techniques",
-    "Bartending artistry in action",
-    "Freshly muddled flavors",
+    "Handpicked premium fibers",
+    "Signature weaving techniques",
+    "Craftsmanship in every detail",
+    "Freshly woven textures",
 ];
 
 const storeInfo = {
     heading: "Where to Find Us",
-    address: "456, Raq Blvd. #404, Los Angeles, CA 90210",
+    address: "456, MG Road, Jaipur, Rajasthan, 302001",
     contact: {
-        phone: "(555) 987-6543",
-        email: "hello@jsmcocktail.com",
+        phone: "+91 98765 43210",
+        email: "hello@soackandstep.in",
     },
 };
 
 const openingHours = [
-    { day: "Mon–Thu", time: "11:00am – 12am" },
-    { day: "Fri", time: "11:00am – 2am" },
-    { day: "Sat", time: "9:00am – 2am" },
-    { day: "Sun", time: "9:00am – 1am" },
+    { day: "Mon–Thu", time: "10:00am – 8:00pm" },
+    { day: "Fri", time: "10:00am – 9:00pm" },
+    { day: "Sat", time: "9:00am – 9:00pm" },
+    { day: "Sun", time: "9:00am – 7:00pm" },
 ];
 
 const socials = [
     {
         name: "Instagram",
         icon: "/images/insta.png",
-        url: "https://www.instagram.com/ichhpilani_.kabir/#",
+        url: "https://www.instagram.com/soakandstep.official/",
     },
     {
         name: "X (Twitter)",
         icon: "/images/x.png",
-        url: "https://x.com/ichhpilani42107",
+        url: "https://x.com/#",
     },
     {
         name: "Facebook",
         icon: "/images/fb.png",
-        url: "https://www.facebook.com/ichhpilani_.kabir/#",
+        url: "https://www.facebook.com/#",
     },
 ];
 
 const allCocktails = [
     {
         id: 1,
-        name: "Classic Mojito",
-        image: "/images/drink1.png",
-        title: "Simple Ingredients, Bold Flavor",
+        name: "Velvet Haven",
+        image: "/images/abt1-removebg-preview.png",
+        title: "Simple Design, Bold Statement",
         description:
-            "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+            "Handwoven with premium wool and silk, this carpet brings warmth, style, and character to any space. A timeless piece for everyday elegance in your home.",
     },
     {
         id: 2,
-        name: "Raspberry Mojito",
-        image: "/images/drink2.png",
-        title: "A Zesty Classic That Never Fails",
+        name: "Golden Loom",
+        image: "/images/abt4-removebg-preview.png",
+        title: "A Classic That Never Fails",
         description:
-            "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocks—it’s always crisp & refreshing.",
+            "A luxurious carpet that combines intricate patterns with soft textures. Perfect for adding a royal touch to modern or traditional Indian interiors.",
     },
     {
         id: 3,
-        name: "Violet Breeze",
-        image: "/images/drink3.png",
-        title: "Simple Ingredients, Bold Flavor",
+        name: "Sapphire Weave",
+        image: "/images/abt5-removebg-preview.png",
+        title: "Simple Design, Bold Statement",
         description:
-            "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+            "Crafted from handpicked fibers, this piece offers unmatched comfort underfoot while elevating your living space's elegance.",
     },
     {
         id: 4,
-        name: "Curacao Mojito",
-        image: "/images/drink4.png",
-        title: "Crafted With Care, Poured With Love",
+        name: "Crimson Threads",
+        image: "/images/abt6-removebg-preview.png",
+        title: "Crafted With Care, Woven With Love",
         description:
-            "Each cocktail is made with fresh ingredients and a passion for perfecting every pour, whether you're celebrating or simply relaxing.",
+            "Every carpet is made with skill, precision, and passion, designed to make every step in your home a luxurious experience.",
     },
 ];
 
