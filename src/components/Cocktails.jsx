@@ -38,7 +38,7 @@ const LuxuryKidsCarpets = () => {
     };
 
     return (
-        <div className="bg-black py-12 px-4 flex justify-center min-h-[600px]">
+        <div className=" py-12 px-4 flex justify-center min-h-[600px]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl">
                 {/* Large Image */}
                 <div

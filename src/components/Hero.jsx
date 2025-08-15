@@ -3,7 +3,7 @@ import { Star, Sparkles, Heart } from "lucide-react"
 
 export default function HomePage() {
     return (
-        <main className="min-h-screen bg-gradient-to-br from-black via-black to-yellow-95000 relative overflow-hidden">
+        <main className="min-h-screen bg-gradient-to-br from-#f5f5dc via-#f5f5dc to-yellow-95000 relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-yellow blur-3xl animate-pulse"></div>
@@ -23,9 +23,9 @@ export default function HomePage() {
                         </div>
 
                         {/* Main Headline */}
-                        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
                             Elevate Playtime with{" "}
-                            <span className="text-transparent bg-gradient-to-r from-yellow to-white bg-clip-text">
+                            <span className="text-transparent bg-gradient-to-r from-yellow to-black bg-clip-text">
                 Luxurious Comfort
               </span>
                         </h1>
@@ -110,11 +110,7 @@ export default function HomePage() {
             </div>
 
             {/* Bottom wave decoration */}
-            <div className="absolute bottom-0 left-0 right-0">
-                <svg viewBox="0 0 1200 120" className="w-full h-20 fill-blue-950/10">
-                    <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z"></path>
-                </svg>
-            </div>
+
         </main>
     )
 }

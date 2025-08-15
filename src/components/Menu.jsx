@@ -52,8 +52,8 @@ const Menu = () => {
                     return (
                         <button key={cocktail.id} className={`
 				${isActive
-                            ? 'text-white border-white'
-                            : 'text-white/50 border-white/50'}
+                            ? 'text-black border-black'
+                            : 'text-black/50 border-black/50'}
 			 `}	onClick={() => goToSlide(index)}
                         >
                             {cocktail.name}
@@ -66,12 +66,22 @@ const Menu = () => {
                 <div className="arrows">
                     <button className="text-left" onClick={() => goToSlide(currentIndex - 1)}>
                         <span>{prevCocktail.name}</span>
-                        <img src="/images/right-arrow.png" alt="right-arrow" aria-hidden="true" />
+                        <img
+                            src="/images/right-arrow.png"
+                            className="[filter:invert(1)_brightness(0)_contrast(100%)]"
+                            alt="right-arrow"
+                        />
+
                     </button>
 
                     <button className="text-left" onClick={() => goToSlide(currentIndex + 1)}>
                         <span>{nextCocktail.name}</span>
-                        <img src="/images/left-arrow.png" alt="left-arrow" aria-hidden="true" />
+                        <img
+                            src="/images/left-arrow.png"
+                            className="[filter:invert(1)_brightness(0)_contrast(100%)]"
+                            alt="right-arrow"
+                        />
+
                     </button>
                 </div>
 
@@ -82,7 +92,7 @@ const Menu = () => {
                 <div className="recipe">
                     <div ref={contentRef} className="info">
 
-                        <p id="title">{currentCocktail.name}</p>
+                        <p id="title" className="text-black">{currentCocktail.name}</p>
                     </div>
 
                     <div className="details">

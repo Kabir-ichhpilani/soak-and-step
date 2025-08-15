@@ -16,7 +16,7 @@ const NavBar = () => {
             }
         });
         timeteen.fromTo('nav',{backgroundColor: "transparent"},
-            {backgroundColor:"#00000050",
+            {backgroundColor:"#f5f5dc50",
                 backdropFilter: "blur(10px)",
                 duration: 1, ease: "power1.inOut",
             });
@@ -25,7 +25,7 @@ const NavBar = () => {
         <nav>
             <div>
             <a href="#home" className="flex items-center gap-2 h-10 w-10">
-                <img src="/images/logo.png"/>
+                <img src="/images/logo.png"  className="[filter:invert(1)_brightness(0)_contrast(100%)]"/>
                 <p>SOAK & STEP</p>
 
             </a>

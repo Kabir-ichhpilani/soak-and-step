@@ -61,7 +61,7 @@ const Art = () => {
                 <div className="masked-container">
                     <h2 className="will-fade">Step-Worthy Luxury</h2>
                     <div id="masked-content" >
-                        <h3>Made with Craft, Woven with Passion</h3>
+                        <h3 className="bg-gradient-to-r from-yellow to-black bg-clip-text">Made with Craft, Woven with Passion</h3>
                         <p>This isn’t just a carpet. It’s a carefully crafted piece made just for your space.</p>
                     </div>
                 </div>

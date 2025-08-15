@@ -68,7 +68,7 @@ const Contact = () => {
                                 rel="noopener noreferrer"
                                 aria-label={social.name}
                             >
-                                <img src={social.icon} />
+                                <img src={social.icon} className="[filter:invert(1)_brightness(0)_contrast(100%)]" />
                             </a>
                         ))}
                     </div>
