@@ -94,7 +94,37 @@ body {
     .noisy {
         @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
     }
+    /* Add this to your existing CSS file */
 
+    #luxury-collection {
+        @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
+
+        .top-grid {
+            @apply grid grid-cols-1 xl:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
+
+            > div {
+                @apply rounded-3xl overflow-hidden h-72 relative;
+            }
+
+            img {
+                @apply object-cover w-full h-full;
+            }
+        }
+
+        .bottom-grid {
+            @apply grid grid-cols-1 md:grid-cols-12 gap-5 md:px-0 px-5;
+
+            > div {
+                @apply rounded-3xl overflow-hidden h-72 relative;
+            }
+
+            img {
+                @apply object-cover w-full h-full;
+            }
+        }
+
+
+    }
     #hero {
         @apply relative z-10 min-h-dvh w-full border border-transparent;
 
