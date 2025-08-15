@@ -45,7 +45,7 @@ const Menu = () => {
                 Sample Carpets
             </h2>
 
-            <nav className="cocktail-tabs" aria-label="Cocktail Navigation">
+            <div className="cocktail-tabs" aria-label="Cocktail Navigation">
                 {allCocktails.map((cocktail, index) => {
                     const isActive = index === currentIndex;
 
@@ -60,7 +60,7 @@ const Menu = () => {
                         </button>
                     )
                 })}
-            </nav>
+            </div>
 
             <div className="content">
                 <div className="arrows">
