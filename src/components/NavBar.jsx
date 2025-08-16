@@ -24,7 +24,7 @@ const NavBar = () => {
     return (
         <nav>
             <div>
-            <a href="#home" className="flex  items-center gap-2 h-6 w-6 md:h-10 md:w-10">
+            <a href="#home" className="flex  items-center  h-6 w-6 md:h-10 md:w-10">
                 <img src="/images/logo.png"  className="[filter:invert(1)_brightness(0)_contrast(100%)]"/>
                 <p className="heading sm:text-sm hidden md:block md:text-2xl sm:pr-5 ">SOAK & STEP</p>
 

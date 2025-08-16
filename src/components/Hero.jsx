@@ -1,6 +1,5 @@
-
 import { Star, Sparkles, Heart } from "lucide-react"
-
+import ReactPlayer from 'react-player'
 export default function HomePage() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-#f5f5dc via-#f5f5dc to-yellow-95000 relative overflow-hidden">
@@ -12,14 +11,14 @@ export default function HomePage() {
             </div>
 
             {/* Hero Content */}
-            <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
+            <div className="relative flex z-10 container mx-auto px-4 py-16 lg:py-24">
                 <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
                     {/* Left Content */}
                     <div className="space-y-8 text-center lg:text-left">
                         {/* Badge */}
-                        <div className="inline-flex items-center gap-2 bg-yellow border border-black rounded-full px-4 py-2 text-black text-sm font-medium backdrop-blur-sm">
-                            <Sparkles className="w-4 h-4" />
-
+                        <div
+                            className="inline-flex items-center gap-2 bg-yellow border border-black rounded-full px-4 py-2 text-black text-sm font-medium backdrop-blur-sm">
+                            <Sparkles className="w-4 h-4"/>
                         </div>
 
                         {/* Main Headline */}
@@ -32,22 +31,23 @@ export default function HomePage() {
 
                         {/* Subheadline */}
                         <p className="text-lg md:text-xl  leading-relaxed max-w-2xl">
-                            Explore our collection of premium carpets designed for your little ones' dream rooms. Where luxury meets
+                            Explore our collection of premium carpets designed for your little ones' dream rooms. Where
+                            luxury meets
                             playfulness in perfect harmony.
                         </p>
 
                         {/* Features */}
                         <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-sm ">
                             <div className="flex items-center gap-2">
-                                <Star className="w-4 h-4 text-yellow" />
+                                <Star className="w-4 h-4 text-green-300"/>
                                 Hypoallergenic Materials
                             </div>
                             <div className="flex items-center gap-2">
-                                <Heart className="w-4 h-4 text-yellow" />
+                                <Heart className="w-4 h-4 text-green-300"/>
                                 Child-Safe Design
                             </div>
                             <div className="flex items-center gap-2">
-                                <Sparkles className="w-4 h-4 text-yellow" />
+                                <Sparkles className="w-4 h-4 text-green-300"/>
                                 Easy to Clean
                             </div>
                         </div>
@@ -86,31 +86,28 @@ export default function HomePage() {
                         {/*    </div>*/}
                         {/*</div>*/}
                     </div>
-
-                    {/* Right Content - Hero Image */}
-                    <div className="relative">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                            <img
-                                src="/images/abt1.jpg"
-                                alt="Luxury children's carpet in a beautifully designed bedroom"
-                                className="w-full h-[600px] object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
-                        </div>
-
-                        {/* Floating elements */}
-                        <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg animate-bounce">
-                            <Heart className="w-6 h-6 text-red-500" />
-                        </div>
-                        <div className="absolute -bottom-4 -left-4 bg-cyan-500 rounded-full p-4 shadow-lg animate-pulse">
-                            <Star className="w-6 h-6 text-white" />
-                        </div>
+                    <div>
+                        <video
+                            src="/videos/output.mp4"
+                            autoPlay={true}
+                            loop
+                            muted
+                            playsInline
+                            width="100px"
+                            height="20px !important"
+                            className="rounded-lg  pl-15 relative object-center transform hover:rotate-1 rounded-2xl"
+                        />
                     </div>
+
+
                 </div>
+                {/* Right Content - Hero Image */}
+
+
             </div>
 
-            {/* Bottom wave decoration */}
 
+            {/* Bottom wave decoration */}
         </main>
     )
 }

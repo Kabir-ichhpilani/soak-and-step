@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 
 
 @import "tailwindcss";
@@ -17,10 +19,11 @@
     --font-modern-negra: "Modern Negra", sans-serif;
     --font-serif: "DM Serif Text", serif;
     --font-playfair: "Playfair Display", serif;
+    --font-lato: "Lato", sans-serif;
 }
 .heading {
     font-family: 'Playfair Display', serif;
-    margin-bottom: 4px;
+    margin-bottom: 1px;
 
 }
 html,
@@ -171,7 +174,7 @@ body {
     }
 
     video {
-        @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
+        @apply  md:h-[600px] md:w-[600px] h-[300px] w-[300px] absolute bottom-0 left-0  object-cover md:object-cover;
     }
 
     #cocktails {

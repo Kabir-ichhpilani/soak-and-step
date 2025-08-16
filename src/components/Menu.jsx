@@ -1,107 +1,61 @@
+import React from 'react'
 
-import { allCocktails } from '../../constants/index.js'
-import { useRef, useState } from 'react'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap';
+import {Heart, Sparkles, Star} from "lucide-react";
 
 const Menu = () => {
-    const contentRef = useRef(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useGSAP(() => {
-        gsap.fromTo('#title', { opacity: 0 }, { opacity: 1, duration: 1 });
-        gsap.fromTo('.cocktail img', { opacity: 0, xPercent: -100 }, {
-            xPercent: 0, opacity: 1, duration: 1, ease: 'power1.inOut'
-        })
-        gsap.fromTo('.details h2', { yPercent: 100, opacity: 0 }, {
-            yPercent: 0, opacity: 100, ease: 'power1.inOut'
-        })
-        gsap.fromTo('.details p', { yPercent: 100, opacity: 0 }, {
-            yPercent: 0, opacity: 100, ease: 'power1.inOut'
-        })
-    }, [currentIndex]);
-
-    const totalCocktails = allCocktails.length;
-
-    const goToSlide = (index) => {
-        const newIndex = (index + totalCocktails) % totalCocktails;
-
-        setCurrentIndex(newIndex);
-    }
-
-    const getCocktailAt = (indexOffset) => {
-        return allCocktails[(currentIndex + indexOffset + totalCocktails) % totalCocktails]
-    }
-
-    const currentCocktail = getCocktailAt(0);
-    const prevCocktail = getCocktailAt(-1);
-    const nextCocktail = getCocktailAt(1);
-
     return (
-        <section id="menu" aria-labelledby="menu-heading">
-
-
-            <h2 id="menu-heading" className="sr-only">
-                Sample Carpets
-            </h2>
-
-            <div className="cocktail-tabs" aria-label="Cocktail Navigation">
-                {allCocktails.map((cocktail, index) => {
-                    const isActive = index === currentIndex;
-
-                    return (
-                        <button key={cocktail.id} className={`
-				${isActive
-                            ? 'text-black border-black'
-                            : 'text-black/50 border-black/50'}
-			 `}	onClick={() => goToSlide(index)}
-                        >
-                            {cocktail.name}
-                        </button>
-                    )
-                })}
-            </div>
-
-            <div className="content">
-                <div className="arrows">
-                    <button className="text-left" onClick={() => goToSlide(currentIndex - 1)}>
-                        <span>{prevCocktail.name}</span>
-                        <img
-                            src="/images/right-arrow.png"
-                            className="[filter:invert(1)_brightness(0)_contrast(100%)]"
-                            alt="right-arrow"
-                        />
-
-                    </button>
-
-                    <button className="text-left" onClick={() => goToSlide(currentIndex + 1)}>
-                        <span>{nextCocktail.name}</span>
-                        <img
-                            src="/images/left-arrow.png"
-                            className="[filter:invert(1)_brightness(0)_contrast(100%)]"
-                            alt="right-arrow"
-                        />
-
-                    </button>
-                </div>
-
-                <div className="cocktail">
-                    <img src={currentCocktail.image} alt={"hel"} className="object-contain"/>
-                </div>
-
-                <div className="recipe">
-                    <div ref={contentRef} className="info">
-
-                        <p id="title" className="text-black">{currentCocktail.name}</p>
+        <div>
+            <section className="py-16 lg:py-24 ">
+                <div className="container mx-auto px-4">
+                    {/* Section Header */}
+                    <div className="text-center mb-16">
+                        <h2 className=" text-4xl md:text-5xl font-extralight heading text-black mb-6">Why Choose Soak & Step</h2>
+                        <p className="text-lg  max-w-3xl mx-auto leading-relaxed">
+                            Experience the perfect blend of artisanal craftsmanship, sustainable practices, and timeless design
+                        </p>
                     </div>
 
-                    <div className="details">
-                        <h2>{currentCocktail.title}</h2>
-                        <p>{currentCocktail.description}</p>
+                    {/* Feature Cards */}
+                    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {/* Handwoven Luxury */}
+                        <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+                            <div className="w-16 h-16 bg-green-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <Sparkles className="w-8 h-8 text-white" />
+                            </div>
+                            <h3 className="font-serif text-2xl font-extralight text-black mb-4">Handwoven Luxury</h3>
+                            <p className=" leading-relaxed">
+                                Each rug is meticulously crafted by skilled artisans using traditional techniques passed down through
+                                generations.
+                            </p>
+                        </div>
+
+                        {/* Soft & Sustainable */}
+                        <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+                            <div className="w-16 h-16 bg-green-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <Heart className="w-8 h-8 text-white" />
+                            </div>
+                            <h3 className="font-serif text-2xl font-extralight text-black mb-4">Soft & Sustainable</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                We source only the finest natural fibers and eco-friendly materials, ensuring both comfort and
+                                environmental responsibility.
+                            </p>
+                        </div>
+
+                        {/* Crafted with Care */}
+                        <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+                            <div className="w-16 h-16 bg-green-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <Star className="w-8 h-8 text-white" />
+                            </div>
+                            <h3 className="font-serif text-2xl font-extralight text-black mb-4">Crafted with Care</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Every piece is infused with passion and attention to detail, creating heirloom-quality rugs that tell a
+                                story.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     )
 }
 export default Menu

@@ -58,7 +58,7 @@ const Luxury = () => {
                         <div className="md:col-span-6 relative">
 
                             <img
-                                src="/images/r2.webp"
+                                src="https://m.media-amazon.com/images/I/81rHdnBDt1L._SL1500_.jpg"
                                 alt="Luxury rug collection - Main showcase"
                             />
                         </div>

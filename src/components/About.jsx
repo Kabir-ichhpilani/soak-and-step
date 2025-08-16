@@ -34,7 +34,7 @@ const About = () => {
            <div className="md:px-0 mb-16 px-5">
                <div className="content">
                    <div className="md:col-span-8">
-                       <p className="badge"> Best Carpets</p>
+
                        <h2>
                            Where every detail matters—from splash to softness
                        </h2>
@@ -47,11 +47,9 @@ const About = () => {
 
                        <div>
                            <p className="md:text-3xl text-xl font-bold">
-                           <span>4.5</span>/5
+                           <span className="text-green-300">4.5</span>/5
                            </p>
-                           <p className="text-sm ">
-                               More than +12000 customers
-                           </p>
+
                        </div>
 
                        </div>
